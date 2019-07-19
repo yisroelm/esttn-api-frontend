@@ -1,26 +1,27 @@
 import React, { Component } from 'react'
 
-export class ClientIndex extends Component {
+export class LeContainer extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            clients: []
+            les: []
         }
     }
 
     componentDidMount() {
         fetch("http://localhost:3000/les")
         .then(res => res.json())
-        .then(clients => this.setState({clients})) 
+        .then(les => this.setState({les})) 
   } 
     render() {
         return (
             <ul>
-                {this.state.clients.map(client => <li>{client.name}</li>)}
+                {this.state.les.map(le => <li>{le.name}</li>)}
             </ul>
         )
+        debugger
     }
 }
 
-export default ClientIndex
+export default LeContainer

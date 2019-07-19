@@ -1,12 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ClientIndex from './containers/ClientIndex';
+import LeContainer from './containers/LeContainer';
+import Client from './components/Client';
+import Appointment from './components/Appointment';
+import Product from './components/Product';
 
 function App() {
   return ( 
     <div>
-      {<ClientIndex />}
+      {<LeContainer />}
+      {<Client />}
+      {<Appointment />}
+      {<Product />}
     </div>
   );
   
