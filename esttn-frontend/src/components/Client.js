@@ -8,7 +8,7 @@ class Client extends React.Component {
     return(
     <div>
      {this.props.client.map((client) => {
-       return (<h1>{client.name}</h1>)
+       return (<h4>{client.name}</h4>)
      })}
     </div>
     )     

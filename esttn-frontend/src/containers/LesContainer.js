@@ -25,6 +25,8 @@ import Product from '../components/Product';
                 <div>          
                 <h3>{this.props.les.name}</h3> 
                 <Client client={this.props.les.clients} />
+                <Appointment appointment={this.props.les.appointments} />
+                <Product product={this.props.les.products} />
                 </div>
      )
         }
