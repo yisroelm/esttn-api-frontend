@@ -27,7 +27,7 @@ import { Container, Button } from 'semantic-ui-react'
                 <h3>{this.props.les.name}</h3> 
                 {/* <Client clients={this.props.les.clients} /> */}
                 <Appointment appointments={this.props.les.appointments} />
-                <Product products={this.props.les.products} />
+                {/* <Product products={this.props.les.products} /> */}
                 </div>
      )
         }

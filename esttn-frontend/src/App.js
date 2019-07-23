@@ -24,7 +24,7 @@ class App extends React.Component {
           <NavBar />
           <Route exact path='/'  component={LesContainer} />
           <Route exact path='/clients' render={ () => (<Client les={this.props.les} />)} />
-          <Route exact path='/products' component={Product} />
+          <Route exact path='/products' render={ () => (<Product les={this.props.les} />)} />
           <Route exact path='/appointments' component={Appointment} />
         </div>
       </Router>

@@ -3,16 +3,28 @@ class Product extends React.Component {
 
 
   render() {
-    console.log(this.props)
+    console.log(this.props.les)
+
+    if (this.props.les.length > 0) {
+
+    
+
 
     return(
     <div>
-     {this.props.products.map( (product) => {
-       return (<h4>{product.name}</h4>)
-     })}
+     {this.props.les[0].products.map( p => (
+       <p>{p.name}</p>
+     ))}
     </div>
-    )     
+    )  
+    }  
+    else {
+      return (
+        <h1>not working</h1>
+      )
+    }
+  } 
   }
-}
+
 
   export default Product

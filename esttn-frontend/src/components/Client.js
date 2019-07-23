@@ -12,7 +12,6 @@ class Client extends React.Component {
 
     return(
     <div>
-     <h1>got client</h1>
      {this.props.les[0].clients.map( c => (
        <p>{c.name}</p>
      ))}
