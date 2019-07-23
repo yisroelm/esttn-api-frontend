@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchLe } from '../actions/LeAction'
+import { fetchLes } from '../actions/LeAction'
 import Client from '../components/Client';
+import Appointment from '../components/Appointment';
+import Product from '../components/Product';
 
 
  class LesContainer extends Component {
@@ -17,26 +19,29 @@ import Client from '../components/Client';
       this.props.fetchLes()
   } 
 
-    // showClients(){
-    //     debugger
-    //     if(this.state.les[0].clients.length > 0) {
-    //         return(<Client client={this.state.les[0].clients} />)
-    //     }
-    // } 
+    showClients(){
+        if(this.props.les) {
+            return(
+                <div>          
+                <h3>{this.props.les.name}</h3> 
+                <Client client={this.props.les.clients} />
+                </div>
+     )
+        }
+    } 
 
 
     render() {
-        console.log(this.state)
+        console.log(this.props)
         return (
             <div>
-                {/* {this.showClients()} */}
+                
                 
                 <ul>
-                    <li>{this.state.les.name}</li>
+                 <li>{this.showClients()}</li>
                 </ul>
             </div>
         )
-        debugger
     }
 }
 

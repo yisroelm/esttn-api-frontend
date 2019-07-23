@@ -1,19 +1,18 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react' 
 class Appointment extends React.Component {
-  state = { appointments: []}
 
-  componentDidMount(){
-    fetch('http//localhost:3000/les')
-    .then(function(response){
-      return response.json();
-    })
-    .then(appointments => this.setState({appointments}));
-  }
 
   render() {
-    return <h1>appointment Component</h1>
-    }
+    console.log(this.props)
+
+    return(
+    <div>
+     {this.props.appointment.map((appointment) => {
+       return (<h1>{appointment.name}</h1>)
+     })}
+    </div>
+    )     
   }
+}
 
   export default Appointment
