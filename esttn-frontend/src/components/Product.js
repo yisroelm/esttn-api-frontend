@@ -12,7 +12,7 @@ class Product extends React.Component {
   }
 
   render() {
-    return <h1>products Component</h1>
+    return <h1>product Component</h1>
     }
   }
 

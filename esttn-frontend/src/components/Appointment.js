@@ -12,7 +12,7 @@ class Appointment extends React.Component {
   }
 
   render() {
-    return <h1>appointments Component</h1>
+    return <h1>appointment Component</h1>
     }
   }
 
