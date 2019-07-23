@@ -26,22 +26,22 @@ import { Container, Button } from 'semantic-ui-react'
                 <div>          
                 <h3>{this.props.les.name}</h3> 
                 {/* <Client clients={this.props.les.clients} /> */}
-                <Appointment appointments={this.props.les.appointments} />
+                {/* <Appointment appointments={this.props.les.appointments} /> */}
                 {/* <Product products={this.props.les.products} /> */}
                 </div>
      )
         }
     } 
 
-    showClients() {
-        if (this.props.les.clients)
-        return(
-        <div>
-            {/* <Client myClients={this.props.les} /> */}
-        </div>
-        )
+    // showClients() {
+    //     if (this.props.les.clients)
+    //     return(
+    //     <div>
+    //         {/* <Client myClients={this.props.les} /> */}
+    //     </div>
+    //     )
         
-    }
+    // }
 
 
     render() {

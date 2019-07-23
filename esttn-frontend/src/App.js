@@ -16,7 +16,7 @@ class App extends React.Component {
     this.props.fetchLes()
 } 
   render() {
-  console.log("clients working", this.props.les)
+  console.log("component working", this.props.les)
   return (
     <>
       <Router>
@@ -25,7 +25,7 @@ class App extends React.Component {
           <Route exact path='/'  component={LesContainer} />
           <Route exact path='/clients' render={ () => (<Client les={this.props.les} />)} />
           <Route exact path='/products' render={ () => (<Product les={this.props.les} />)} />
-          <Route exact path='/appointments' component={Appointment} />
+          <Route exact path='/appointments' render={ () => (<Appointment les={this.props.les} />)} />
         </div>
       </Router>
     </>
