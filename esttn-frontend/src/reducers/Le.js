@@ -1,4 +1,4 @@
-export default (state = {}, action) => {
+export default (state = {les: []}, action) => {
     switch(action.type){
 
      case "COMMENCE_LE_FETCH":
@@ -6,7 +6,9 @@ export default (state = {}, action) => {
         return state
 
     case "GET_LES":
-        return {...state, les: action.les[0]}
+    if (state.les) {
+        return {...state, les: [action.les[0]]}
+    }
 
      default:
         return state;

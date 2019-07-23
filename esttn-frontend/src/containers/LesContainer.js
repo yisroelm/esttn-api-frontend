@@ -16,9 +16,9 @@ import { Container, Button } from 'semantic-ui-react'
         }
     }
 
-    componentDidMount() {
-      this.props.fetchLes()
-  } 
+//     componentDidMount() {
+//       this.props.fetchLes()
+//   } 
 
     showComponents(){
         if(this.props.les) {
@@ -37,7 +37,7 @@ import { Container, Button } from 'semantic-ui-react'
         if (this.props.les.clients)
         return(
         <div>
-            <Client clients={this.props.les.clients} />
+            {/* <Client myClients={this.props.les} /> */}
         </div>
         )
         
@@ -52,7 +52,7 @@ import { Container, Button } from 'semantic-ui-react'
                 
                 
                 <ul>
-                    <li>{this.showClients()}</li>
+                    {/* <li>{this.showClients()}</li> */}
                  <li>{this.showComponents()}</li>
                 </ul>
             </div>
@@ -63,4 +63,5 @@ import { Container, Button } from 'semantic-ui-react'
 
 const mapStateToProps = state => ({les: state.les})
 
-export default connect(mapStateToProps, {fetchLes })(LesContainer)
+export default connect(mapStateToProps )(LesContainer)
+// {fetchLes }

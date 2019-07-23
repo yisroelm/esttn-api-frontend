@@ -3,23 +3,29 @@ class Client extends React.Component {
 
 
   render() {
-    console.log(this.props)
-if (this.props.clients) {
+    console.log(this.props.les)
+
+    if (this.props.les.length > 0) {
+
+    
 
 
     return(
     <div>
-     {this.props.clients.map( (client) => {
-       return (<h4>{client.name}</h4>)
-     })}
+     <h1>got client</h1>
+     {this.props.les[0].clients.map( c => (
+       <p>{c.name}</p>
+     ))}
     </div>
     )  
-    }   
+    }  
     else {
-      return(<h1>No clinets found</h1>)
+      return (
+        <h1>not working</h1>
+      )
     }
+  } 
   }
-}
 
 
   export default Client
