@@ -34,13 +34,13 @@ import { Container, Button } from 'semantic-ui-react'
     } 
 
     showClients() {
-        if (this.props.les.clients) {
+        if (this.props.les.clients)
         return(
         <div>
             <Client clients={this.props.les.clients} />
         </div>
         )
-        }
+        
     }
 
 
@@ -50,9 +50,9 @@ import { Container, Button } from 'semantic-ui-react'
            
                    <div>
                 
-                {this.showClients}
+                
                 <ul>
-                    
+                    <li>{this.showClients()}</li>
                  <li>{this.showComponents()}</li>
                 </ul>
             </div>
