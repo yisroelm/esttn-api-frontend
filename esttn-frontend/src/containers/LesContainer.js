@@ -4,6 +4,7 @@ import { fetchLes } from '../actions/LeAction'
 import Client from '../components/Client';
 import Appointment from '../components/Appointment';
 import Product from '../components/Product';
+import { Container, Button } from 'semantic-ui-react'
 
 
  class LesContainer extends Component {
@@ -19,30 +20,43 @@ import Product from '../components/Product';
       this.props.fetchLes()
   } 
 
-    showClients(){
+    showComponents(){
         if(this.props.les) {
             return(
                 <div>          
                 <h3>{this.props.les.name}</h3> 
-                <Client client={this.props.les.clients} />
-                <Appointment appointment={this.props.les.appointments} />
-                <Product product={this.props.les.products} />
+                {/* <Client clients={this.props.les.clients} /> */}
+                <Appointment appointments={this.props.les.appointments} />
+                <Product products={this.props.les.products} />
                 </div>
      )
         }
     } 
 
+    showClients() {
+        if (this.props.les.clients) {
+        return(
+        <div>
+            <Client clients={this.props.les.clients} />
+        </div>
+        )
+        }
+    }
+
 
     render() {
         console.log(this.props)
         return (
-            <div>
+           
+                   <div>
                 
-                
+                {this.showClients}
                 <ul>
-                 <li>{this.showClients()}</li>
+                    
+                 <li>{this.showComponents()}</li>
                 </ul>
             </div>
+         
         )
     }
 }
