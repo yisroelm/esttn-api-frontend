@@ -3,12 +3,8 @@ class Appointment extends React.Component {
 
 
   render() {
-    console.log(this.props.les)
-
-    if (this.props.les.length > 0) {
-
     
-
+    if (this.props.les.length > 0) {
 
     return(
     <div>

@@ -45,7 +45,6 @@ import { Container, Button } from 'semantic-ui-react'
 
 
     render() {
-        console.log(this.props)
         return (
            
                    <div>

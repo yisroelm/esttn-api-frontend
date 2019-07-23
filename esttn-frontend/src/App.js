@@ -16,7 +16,6 @@ class App extends React.Component {
     this.props.fetchLes()
 } 
   render() {
-  console.log("component working", this.props.les)
   return (
     <>
       <Router>
