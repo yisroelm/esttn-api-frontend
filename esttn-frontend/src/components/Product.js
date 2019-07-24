@@ -1,4 +1,7 @@
 import React, { Component } from 'react' 
+import CreateProductContainer from '../containers/CreateProductContainer';
+
+
 class Product extends React.Component {
 
   render() {
@@ -10,6 +13,8 @@ class Product extends React.Component {
      {this.props.les[0].products.map( p => (
        <p>{p.name}</p>
      ))}
+
+     <CreateProductContainer />
     </div>
     )  
     }  
@@ -18,6 +23,7 @@ class Product extends React.Component {
         <h1>not working</h1>
       )
     }
+
   } 
   }
 
