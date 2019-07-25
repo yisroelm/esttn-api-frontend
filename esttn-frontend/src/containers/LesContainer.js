@@ -16,49 +16,26 @@ import { Container, Button } from 'semantic-ui-react'
         }
     }
 
-//     componentDidMount() {
-//       this.props.fetchLes()
-//   } 
-
-    showComponents(){
-        if(this.props.les) {
-            return(
-                <div>          
-                <h3>{this.props.les.name}</h3> 
-                {/* <Client clients={this.props.les.clients} /> */}
-                {/* <Appointment appointments={this.props.les.appointments} /> */}
-                {/* <Product products={this.props.les.products} /> */}
-                </div>
-     )
+    showClientName = () => {
+        if(this.props.les.length > 0) {
+            return( 
+                <div>
+                <h3>{this.props.les[0].name}</h3>
+                </div>)
         }
-    } 
 
-    // showClients() {
-    //     if (this.props.les.clients)
-    //     return(
-    //     <div>
-    //         {/* <Client myClients={this.props.les} /> */}
-    //     </div>
-    //     )
-        
-    // }
-
+    }
+                     
+               
 
     render() {
         return (
-           
-                   <div>
-                
-                
-                <ul>
-                    {/* <li>{this.showClients()}</li> */}
-                 <li>{this.showComponents()}</li>
-                </ul>
-            </div>
-         
-        )
+            <div>
+                {this.showClientName()}
+            </div>  
+            )
+        }
     }
-}
 
 const mapStateToProps = state => ({les: state.les})
 
