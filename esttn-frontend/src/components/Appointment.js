@@ -1,26 +1,33 @@
 import React, { Component } from 'react' 
-class Appointment extends React.Component {
 
 
-  render() {
+const Appointment = (props) => {
+  // begin loading*************
+  if (props.les.length > 0) {
+  return (
     
-    if (this.props.les.length > 0) {
 
-    return(
+    // return(
     <div>
-     {this.props.les[0].appointments.map( a => (
+     {props.les[0].appointments.map( a => (
        <p>{a.date}</p>
      ))}
     </div>
     )  
-    }  
+    } 
     else {
-      return (
-        <h1>not working</h1>
-      )
-    }
-  } 
+      return(
+      <h4>Loading...</h4>)
+    } 
   }
+
+    // else {
+    //   return (
+    //     <h1>not working</h1>
+    //   )
+    // }
+  // } 
+  // }
 
 
   export default Appointment

@@ -34,7 +34,6 @@ class CreateProductContainer extends Component {
     render() {
         return (
             <div>
-                <h1>form</h1>
                 <form onSubmit={this.handleSubmit} >
             <input type="text" onChange={this.handleChange} value={this.state.name}></input>
             

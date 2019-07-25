@@ -13,8 +13,11 @@ import Product from './components/Product';
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.fetchLes()
-} 
+    this.interval = setInterval(() =>{
+      this.props.fetchLes()
+     } ,250)
+  }
+
   render() {
   return (
     <>

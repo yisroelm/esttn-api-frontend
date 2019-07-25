@@ -16,7 +16,7 @@ import { Container, Button } from 'semantic-ui-react'
         }
     }
 
-    showClientName = () => {
+    showName = () => {
         if(this.props.les.length > 0) {
             return( 
                 <div>
@@ -31,7 +31,7 @@ import { Container, Button } from 'semantic-ui-react'
     render() {
         return (
             <div>
-                {this.showClientName()}
+                {this.showName()}
             </div>  
             )
         }
