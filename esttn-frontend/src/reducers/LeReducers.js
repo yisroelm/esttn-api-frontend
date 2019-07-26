@@ -24,19 +24,8 @@ export default (state = initialState, action) => {
 
 
     case "CREATE_PRODUCT":
-        // const product = {
-        //     // fix uuid to just have the product.id
-        //     id: uuidFn(),
-        //     name: action.product
-        // }
-        
-        state.les[0].products.push(action.product)
-        const newProducts = state.les[0].products
 
-        const newLes = {...state.les[0]}
-        newLes.products = newProducts
-        // debugger
-        return {...state, les: [newLes]}
+        return {...state.products.push(action.payload)} 
 
      default:
         return state;

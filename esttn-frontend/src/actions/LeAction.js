@@ -9,7 +9,7 @@ return (dispatch) => { //thunk
 }
 
 
-export const createProduct = (product) => {
+export const createProduct = (product, le_id) => {
     return (dispatch) => {
         return fetch('http://localhost:3000/products', {
           method: 'POST',
@@ -18,7 +18,8 @@ export const createProduct = (product) => {
             Accept: 'application/json'
           },
           body: JSON.stringify({
-            product
+            name: product,
+            le_id: le_id 
           })
         })
           .then(resp => resp.json())

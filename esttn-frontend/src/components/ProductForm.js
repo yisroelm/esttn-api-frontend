@@ -4,37 +4,21 @@ import {createProduct} from '../actions/LeAction'
 
 class ProductForm extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            le_id: this.props.les.id,
-            name: ""
-        }
+    state = {
+        input: ""
     }
 
     handleChange = e => {
         this.setState({
-            name: e.target.value
+            input: e.target.value
         })
-    }
-
-    handleSubmit = e => {
-        e.preventDefault()
-        if (this.state.name !== "") {
-            this.props.createProduct(this.state)
-            this.setState({
-                name: ""
-            }) 
-            
-        }
-
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit} >
-            <input type="text" onChange={this.handleChange} value={this.state.name}></input>
+                <form onSubmit={() => this.props.createProduct(this.state.input, 1)} >
+            <input type="text" onChange={this.handleChange} value={this.state.input}></input>
             
             <input type="submit" value ="Create Product" />
            
@@ -45,10 +29,12 @@ class ProductForm extends Component {
     }
 }
 
-// const mapDispatchToProps = dispatch => ({
+    const mapDispatchToProps = dispatch => {
+        return{
+            createProduct: (productName, le_id) => dispatch (
+                createProduct(productName, le_id)
+            )
+        }
+    }
 
-//     createProduct: product => dispatch({type: "CREATE_PRODUCT",product})
-//    })
-    const mapStateToProps = state => ({les: state.les[0]})
-
-   export default connect(mapStateToProps, {createProduct})(ProductForm)
+   export default connect(null, mapDispatchToProps)(ProductForm)
