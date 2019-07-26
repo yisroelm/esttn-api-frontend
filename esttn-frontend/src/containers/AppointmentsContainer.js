@@ -1,7 +1,7 @@
 import React, { Component } from 'react' 
-import { Card, Icon, Image, Container } from 'semantic-ui-react'
+import { Card, Container } from 'semantic-ui-react'
 import { connect } from 'react-redux';
-import AppointmentCard from './AppointmentCard';
+import AppointmentCard from '../components/AppointmentCard';
 
 const AppointmentsContainer = (props) => {
 

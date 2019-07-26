@@ -8,7 +8,7 @@ import LesContainer from './containers/LesContainer';
 import { fetchLes } from './actions/LeAction'
 import Client from './components/Client';
 import Product from './components/Product';
-import AppointmentsContainer from './components/AppointmentsContainer';
+import AppointmentsContainer from './containers/AppointmentsContainer';
 
 
 class App extends React.Component {

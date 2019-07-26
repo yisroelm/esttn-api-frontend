@@ -15,11 +15,11 @@ export default class AppointmentCard extends Component {
                         {this.props.appointment.date}
                         </Card.Header>
                         <Card.Description>
-                        The AppointmentCard Description
+                        {this.props.appointment.time} 
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        AppointmentCard Content
+                        Please be on time to your appointment
                     </Card.Content>
                 </Card>
             </div>
