@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchLes } from '../actions/LeAction'
-import Client from '../components/Client';
-import Appointment from '../components/Appointment';
-import Product from '../components/Product';
-import { Container, Button } from 'semantic-ui-react'
 
 
- class LesContainer extends Component {
-    constructor(props) {
-        super(props)
+class LesContainer extends Component {
+//     constructor(props) {
+//         super(props)
 
-        this.state = {
-            les: {}
-        }
-    }
+//         this.state = {
+//             les: {}
+//         }
+//     }
 
     showName = () => {
         if(this.props.les.length > 0) {
@@ -40,4 +35,3 @@ import { Container, Button } from 'semantic-ui-react'
 const mapStateToProps = state => ({les: state.les})
 
 export default connect(mapStateToProps )(LesContainer)
-// {fetchLes }

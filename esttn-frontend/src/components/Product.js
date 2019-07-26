@@ -4,10 +4,9 @@ import CreateProductContainer from '../containers/CreateProductContainer';
   const Product = (props) => {
     // begin loading*************
     if (props.les.length > 0) {
-    return (
-      
-  
-      // return(
+    
+      return (
+
       <div>
        {props.les[0].products.map( p => (
          <p>{p.name}</p>
@@ -22,14 +21,5 @@ import CreateProductContainer from '../containers/CreateProductContainer';
         <h4>Loading...</h4>)
       } 
     }
-  
-      // else {
-      //   return (
-      //     <h1>not working</h1>
-      //   )
-      // }
-    // } 
-    // }
-  
-  
+
     export default Product
