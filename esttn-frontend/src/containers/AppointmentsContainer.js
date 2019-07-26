@@ -1,18 +1,18 @@
 import React, { Component } from 'react' 
 import { Card, Container } from 'semantic-ui-react'
-import { connect } from 'react-redux';
 import AppointmentCard from '../components/AppointmentCard';
 
-const AppointmentsContainer = (props) => {
+class AppointmentsContainer extends Component {
 
+  render() {
   // begin loading*************
-  if (props.les.length > 0) {
+  if (this.props.les.length > 0) {
     // debugger
     return (
     <Container>
     <Card.Group itemsPerRow={3}>
     <div>
-     {props.les[0].appointments.map( a => 
+     {this.props.les[0].appointments.map( a => 
        <AppointmentCard key={a.id} appointment={a} />
      )}
     </div>
@@ -25,5 +25,6 @@ const AppointmentsContainer = (props) => {
       <h4>Loading...</h4>)
     } 
   }
+}
 
 export default AppointmentsContainer
