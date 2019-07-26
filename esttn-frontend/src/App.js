@@ -14,9 +14,10 @@ import AppointmentsContainer from './components/AppointmentsContainer';
 class App extends React.Component {
 
   componentDidMount() {
-    this.interval = setInterval(() =>{
+    // console.log()
+    // this.interval = setInterval(() =>{
       this.props.fetchLes()
-     } ,250)
+    //  } ,250)
   }
 
   render() {

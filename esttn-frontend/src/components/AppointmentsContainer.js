@@ -7,13 +7,13 @@ const AppointmentsContainer = (props) => {
 
   // begin loading*************
   if (props.les.length > 0) {
- 
+    // debugger
     return (
     <Container>
     <Card.Group itemsPerRow={3}>
     <div>
      {props.les[0].appointments.map( a => 
-       <AppointmentCard appointments={props.appointments} />
+       <AppointmentCard key={a.id} appointment={a} />
      )}
     </div>
     </Card.Group>

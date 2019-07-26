@@ -4,7 +4,7 @@ import CreateProductContainer from '../containers/CreateProductContainer';
   const Product = (props) => {
     // begin loading*************
     if (props.les.length > 0) {
-    
+    console.log(props.les)
       return (
 
       <div>

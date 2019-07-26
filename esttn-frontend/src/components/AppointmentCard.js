@@ -5,13 +5,14 @@ export default class AppointmentCard extends Component {
 
 
     render() {
+        // console.log(this.props.appointment.date)
         return (
             <div>
                 <Card >
                     <Image src= "https://i.pinimg.com/236x/2b/5f/0d/2b5f0d0d4e1fe2d061258505b9a44b6e--estheticians-skincare.jpg"/>
                     <Card.Content >
                         <Card.Header>
-                        AppointmentCard Header
+                        {this.props.appointment.date}
                         </Card.Header>
                         <Card.Description>
                         The AppointmentCard Description

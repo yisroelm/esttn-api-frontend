@@ -9,16 +9,24 @@ export default (state = {les: []}, action) => {
         return state
 
     case "GET_LES":
-    if (state.les) {
+        // fix this to be individual models
         return {...state, les: [action.les[0]]}
-    }
+
 
     case "CREATE_PRODUCT":
-        const product = {
-            id: uuidFn(),
-            name: action.product
-        }
-        return {...state, product: product}
+        // const product = {
+        //     // fix uuid to just have the product.id
+        //     id: uuidFn(),
+        //     name: action.product
+        // }
+        
+        state.les[0].products.push(action.product)
+        const newProducts = state.les[0].products
+
+        const newLes = {...state.les[0]}
+        newLes.products = newProducts
+        // debugger
+        return {...state, les: [newLes]}
 
      default:
         return state;
