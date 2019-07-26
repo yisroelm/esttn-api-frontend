@@ -20,20 +20,21 @@ class App extends React.Component {
     //  } ,250)
 
   render() {
-  return (
-    <>
-      <Router>
-        <div>
-          <NavBar />
-          <Route exact path='/'  component={LesContainer} />
-          <Route exact path='/clients' render={ () => (<ClientsContainer les={this.props.les} />)} />
-          <Route exact path='/products' render={ () => (<ProductsContainer les={this.props.les} />)} />
-          <Route exact path='/appointments' render={ () => (<AppointmentsContainer les={this.props.les} />)} />
-        </div>
-      </Router>
-    </>
-  );
-}
+    return (
+      <>
+        <Router>
+          <div>
+            <NavBar />
+            {/* can also have switch */}
+            <Route exact path='/'  component={LesContainer} />
+            <Route exact path='/clients' render={ () => (<ClientsContainer les={this.props.les} />)} />
+            <Route exact path='/products' render={ () => (<ProductsContainer les={this.props.les} />)} />
+            <Route exact path='/appointments' render={ () => (<AppointmentsContainer les={this.props.les} />)} />
+          </div>
+        </Router>
+      </>
+    );
+  }
 }
 
 const mapStateToProps = state => {
