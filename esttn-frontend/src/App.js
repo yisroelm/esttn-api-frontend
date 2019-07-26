@@ -5,9 +5,10 @@ import { connect } from 'react-redux'
 import NavBar from './components/NavBar'
 import LesContainer from './components/Les';
 import { fetchLes } from './actions/LeAction'
-import Client from './components/Clients';
+import Client from './components/ClientCard';
 import Product from './components/Products';
 import AppointmentsContainer from './containers/AppointmentsContainer';
+import ClientsContainer from './containers/ClientsContainer';
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
         <div>
           <NavBar />
           <Route exact path='/'  component={LesContainer} />
-          <Route exact path='/clients' render={ () => (<Client les={this.props.les} />)} />
+          <Route exact path='/clients' render={ () => (<ClientsContainer les={this.props.les} />)} />
           <Route exact path='/products' render={ () => (<Product les={this.props.les} />)} />
           <Route exact path='/appointments' render={ () => (<AppointmentsContainer les={this.props.les} />)} />
         </div>

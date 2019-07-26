@@ -1,23 +1,22 @@
 import React from 'react' 
 import { Card, Image } from 'semantic-ui-react'
 
-const AppointmentCard = (props) => {
-
-        // console.log(props.appointment.date)
+const ClientCard = (props) => {
+        console.log(props)
         return (
             <div>
                 <Card >
-                    <Image src= "https://i.pinimg.com/236x/2b/5f/0d/2b5f0d0d4e1fe2d061258505b9a44b6e--estheticians-skincare.jpg"/>
+                    <Image src= "https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_960_720.png"/>
                     <Card.Content >
                         <Card.Header>
-                        {props.appointment.date}
+                        {props.client.name}
                         </Card.Header>
                         <Card.Description>
-                        {props.appointment.time} 
+                        {props.client.age} 
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        Please be on time to your appointment
+                        *Place your info here*
                     </Card.Content>
                 </Card>
             </div>
@@ -25,5 +24,5 @@ const AppointmentCard = (props) => {
     }
 
 
-export default AppointmentCard
+export default ClientCard
 
