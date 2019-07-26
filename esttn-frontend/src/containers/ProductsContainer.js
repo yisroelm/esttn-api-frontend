@@ -1,5 +1,8 @@
-import React, { Component } from 'react' 
-import CreateProductContainer from './CreateProductComponent';
+import React from 'react' 
+import ProductForm from '../components/ProductForm';
+import { Card, Container } from 'semantic-ui-react'
+import AppointmentCard from '../components/AppointmentCard';
+
 
   const Product = (props) => {
     // begin loading*************
@@ -12,7 +15,7 @@ import CreateProductContainer from './CreateProductComponent';
          <p>{p.name}</p>
        ))}
 
-       <CreateProductContainer />
+       <ProductForm />
       </div>
       )  
       } 
