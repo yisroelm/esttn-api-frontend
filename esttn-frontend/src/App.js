@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
 import NavBar from './components/NavBar'
-import LesContainer from './components/Les';
+import LesContainer from './containers/LesContainer';
 import { fetchLes } from './actions/LeAction'
 import ProductsContainer from './containers/ProductsContainer';
 import AppointmentsContainer from './containers/AppointmentsContainer';
