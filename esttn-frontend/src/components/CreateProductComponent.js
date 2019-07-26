@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Product from '../components/Product';
+import Product from './Product';
 import { connect } from 'react-redux';
 import {createProduct} from '../actions/LeAction'
 
-class CreateProductContainer extends Component {
+class CreateProductComponent extends Component {
 
     constructor(props) {
         super(props)
@@ -52,4 +52,4 @@ class CreateProductContainer extends Component {
 //    })
     const mapStateToProps = state => ({les: state.les[0]})
 
-   export default connect(mapStateToProps, {createProduct})(CreateProductContainer)
+   export default connect(mapStateToProps, {createProduct})(CreateProductComponent)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react' 
-import CreateProductContainer from '../containers/CreateProductContainer';
+import CreateProductContainer from './CreateProductComponent';
 
   const Product = (props) => {
     // begin loading*************
