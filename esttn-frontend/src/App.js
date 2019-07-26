@@ -2,12 +2,11 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
-import { Container, Button } from 'semantic-ui-react'
 import NavBar from './components/NavBar'
-import LesContainer from './containers/LesContainer';
+import LesContainer from './components/Les';
 import { fetchLes } from './actions/LeAction'
-import Client from './components/Client';
-import Product from './components/Product';
+import Client from './components/Clients';
+import Product from './components/Products';
 import AppointmentsContainer from './containers/AppointmentsContainer';
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Product from './Product';
+import Product from './Products';
 import { connect } from 'react-redux';
 import {createProduct} from '../actions/LeAction'
 

@@ -1,5 +1,5 @@
-import uuid from "uuid";
-export const uuidFn = uuid;
+// import uuid from "uuid";
+// export const uuidFn = uuid;
 
 export default (state = {les: []}, action) => {
     switch(action.type){

@@ -1,4 +1,4 @@
-import Le from "../reducers/Le";
+import LeReducers from "../reducers/LeReducers";
 
 export function fetchLes() {
 return (dispatch) => {
