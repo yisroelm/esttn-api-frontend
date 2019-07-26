@@ -7,7 +7,7 @@ const AppointmentCard = (props) => {
         return (
             <div>
                 <Card >
-                    <Image src= "https://i.pinimg.com/236x/2b/5f/0d/2b5f0d0d4e1fe2d061258505b9a44b6e--estheticians-skincare.jpg"/>
+                    <Image src= "https://cms.cloudinary.vpsvc.com//image/fetch/t_sitecore_images/f_auto,dpr_auto,w_auto/https://s3-eu-west-1.amazonaws.com/sitecore-media-bucket/prod%2Fen%2F%7B374A563C-F2A9-4BE5-B161-D84E80C521CC%7D"/>
                     <Card.Content >
                         <Card.Header>
                         {props.appointment.date}
