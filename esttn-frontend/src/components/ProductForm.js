@@ -10,20 +10,17 @@ class ProductForm extends Component {
 
     handleChange = e => {
         this.setState({
-            input: e.target.value
+            input: e.target.value //updating state on keystroke
         })
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={() => this.props.createProduct(this.state.input, 1)} >
-            <input type="text" onChange={this.handleChange} value={this.state.input}></input>
-            
-            <input type="submit" value ="Create Product" />
-           
-            
-            </form>
+                <form onSubmit={() => this.props.createProduct(this.state.input, 1)}> 
+                    <input type="text" onChange={this.handleChange} value={this.state.input}></input>
+                    <input type="submit" value ="Create Product" />
+                </form>
             </div>
         )
     }
@@ -37,4 +34,5 @@ class ProductForm extends Component {
         }
     }
 
-   export default connect(null, mapDispatchToProps)(ProductForm)
+   export default connect(null, mapDispatchToProps)(ProductForm) //mapDispatchToProps has to be 2nd argument because of arguments
+    //connect is a higher order function which is a purefunction (which is consistint) that returns a function

@@ -8,7 +8,7 @@ const NavBar = () => {
     <Container>
         <br/>
         <div className='center navbar'>
-          <Link to='/'><Button size='medium' color='olive'>Les</Button></Link>
+          <Link to='/'><Button size='medium' color='olive'>Le Profile</Button></Link>
           <Link to='/clients'><Button size='medium' color='red'>Clients</Button></Link>
           <Link to='/products'><Button size='medium' color='blue'>Products</Button></Link>
           <Link to='/appointments'><Button size='medium' color='green'>Appointments</Button></Link>

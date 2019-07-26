@@ -12,7 +12,7 @@ class ProductsContainer extends Component {
     <Card.Group itemsPerRow={3}>
     <div>
      {this.props.products.map( p => 
-       <ProductCard key={p.id} product={p} />
+       <ProductCard key={p.id} product={p} /> // id for react access
      )}
      <ProductForm />
     </div>
