@@ -10,7 +10,7 @@ export default (state = {les: []}, action) => {
 
     case "GET_LES":
         // fix this to be individual models
-        return {...state, les: [action.les[0]]}
+        return {...state, les: [action.payload]} //action.paylaod
 
 
     case "CREATE_PRODUCT":

@@ -1,10 +1,10 @@
 import LeReducers from "../reducers/LeReducers";
 
 export function fetchLes() {
-return (dispatch) => {
+return (dispatch) => { //thunk
     return fetch("http://localhost:3000/les")
     .then(res => res.json())
-    .then(les =>dispatch({type:"GET_LES", les} ))
+    .then(les =>dispatch({type:"GET_LES", payload: les[0]} ))
     };
 }
 

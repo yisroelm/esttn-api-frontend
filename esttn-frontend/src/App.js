@@ -13,11 +13,11 @@ import ClientsContainer from './containers/ClientsContainer';
 class App extends React.Component {
 
   componentDidMount() {
+    this.props.fetchLes()
+  }
     // console.log()
     // this.interval = setInterval(() =>{
-      this.props.fetchLes()
     //  } ,250)
-  }
 
   render() {
   return (
