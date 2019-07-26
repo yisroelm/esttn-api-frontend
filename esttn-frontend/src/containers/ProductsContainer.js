@@ -1,28 +1,32 @@
-import React from 'react' 
+import React, { Component } from 'react' 
 import ProductForm from '../components/ProductForm';
 import { Card, Container } from 'semantic-ui-react'
-import AppointmentCard from '../components/AppointmentCard';
+import ProductCard from '../components/ProductCard';
 
+class ProductsContainer extends Component {
 
-  const Product = (props) => {
-    // begin loading*************
-    if (props.les.length > 0) {
-    console.log(props.les)
-      return (
+  render() {
+  // begin loading*************
+  if (this.props.les.length > 0) {
 
-      <div>
-       {props.les[0].products.map( p => (
-         <p>{p.name}</p>
-       ))}
+    return (
+    <Container>
+    <Card.Group itemsPerRow={3}>
+    <div>
+     {this.props.les[0].products.map( p => 
+       <ProductCard key={p.id} product={p} />
+     )}
+     <ProductForm />
+    </div>
+    </Card.Group>
+    </Container>
+    )  
+    } 
+    else {
+      return(
+      <h4>Loading...</h4>)
+    } 
+  }
+}
 
-       <ProductForm />
-      </div>
-      )  
-      } 
-      else {
-        return(
-        <h4>Loading...</h4>)
-      } 
-    }
-
-    export default Product
+export default ProductsContainer
