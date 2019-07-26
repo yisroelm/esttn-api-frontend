@@ -1,30 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import LeCard from '../components/LeCard';
 
 class LesContainer extends Component {
-
-    showName = () => {
-        if(this.props.les.length > 0) {
-            return( 
-                <div>
-                <h3>{this.props.les[0].name}</h3>
-                </div>)
-        }
-
-    }
-                     
-               
-
-    render() {
+              
+     render() {
         return (
             <div>
-                {this.showName()}
+                <LeCard current_le={this.props.les}/>
             </div>  
             )
         }
     }
 
-const mapStateToProps = state => ({les: state.les})
+const mapStateToProps = state => ({les: state.les[0]})
 
 export default connect(mapStateToProps )(LesContainer)
