@@ -1,7 +1,12 @@
-// import uuid from "uuid";
-// export const uuidFn = uuid;
+const initialState = {
+    les: [],
+    clients: [],
+    products: [],
+    appointments: []
 
-export default (state = {les: []}, action) => {
+}
+
+export default (state = initialState, action) => {
     switch(action.type){
 
      case "COMMENCE_LE_FETCH":
@@ -10,7 +15,12 @@ export default (state = {les: []}, action) => {
 
     case "GET_LES":
         // fix this to be individual models
-        return {...state, les: [action.payload]} //action.paylaod
+        return {...state, 
+            les: [action.payload.name], 
+            clients: action.payload.clients,
+            products: action.payload.products,
+            appointments: action.payload.appointments
+        } //action.paylaod
 
 
     case "CREATE_PRODUCT":

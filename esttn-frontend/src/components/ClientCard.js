@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 
 const ClientCard = (props) => {
-        console.log(props)
         return (
             <div>
                 <Card >

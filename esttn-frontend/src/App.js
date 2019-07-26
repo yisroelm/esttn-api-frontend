@@ -12,9 +12,9 @@ import ClientsContainer from './containers/ClientsContainer';
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchLes()
-  }
+    componentDidMount() {
+      this.props.fetchLes()
+    }
     // console.log()
     // this.interval = setInterval(() =>{
     //  } ,250)
@@ -22,12 +22,13 @@ class App extends React.Component {
   render() {
     return (
       <>
+      {console.log(this.props)}
         <Router>
           <div>
             <NavBar />
             {/* can also have switch */}
             <Route exact path='/'  component={LesContainer} />
-            <Route exact path='/clients' render={ () => (<ClientsContainer les={this.props.les} />)} />
+            <Route exact path='/clients' render={ () => (<ClientsContainer />)} />
             <Route exact path='/products' render={ () => (<ProductsContainer les={this.props.les} />)} />
             <Route exact path='/appointments' render={ () => (<AppointmentsContainer les={this.props.les} />)} />
           </div>

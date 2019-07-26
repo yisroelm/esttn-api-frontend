@@ -3,13 +3,6 @@ import { connect } from 'react-redux'
 
 
 class LesContainer extends Component {
-//     constructor(props) {
-        // super(props)
-
-//         this.state = {
-//             les: {}
-//         }
-//     }
 
     showName = () => {
         if(this.props.les.length > 0) {
