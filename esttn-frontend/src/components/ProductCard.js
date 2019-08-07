@@ -3,8 +3,8 @@ import { Card, Image } from 'semantic-ui-react'
 
 const ProductCard = (props) => {
         return (
-            <div>
-                <Card >
+            <div className="Productcard">
+                <Card className="Productcard">
                     <Image src= "https://www.mariobadescu.com/content/images/thumbs/0110787_facial-spray-with-aloe-herbs-and-rosewater.jpeg"/>
                     <Card.Content >
                         <Card.Header>

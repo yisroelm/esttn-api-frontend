@@ -25,8 +25,11 @@ class ProductsContainer extends Component {
     return (
     <Container>
     <div>
-    Search <input type="text" onChange={(e) => this.handleChange(e)} value={this.state.input}></input>
-     {this.filtering().map( p => 
+      <div className="SearchBar">
+        Search <input type="text" onChange={(e) => this.handleChange(e)} value={this.state.input}></input>
+      </div>
+      <br/>
+    {this.filtering().map( p => 
        <ProductCard key={p.id} product={p} /> // id for react access
      )}
      <ProductForm />
@@ -38,7 +41,7 @@ class ProductsContainer extends Component {
 
 const mapStateToProps = state => {
   return {products: state.products}
- }
+}
  
  export default connect(mapStateToProps, null)(ProductsContainer)
 
