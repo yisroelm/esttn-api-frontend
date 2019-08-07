@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import ProductForm from '../components/ProductForm';
 import { Container } from 'semantic-ui-react'
 import ProductCard from '../components/ProductCard';
-import { validate } from '@babel/types';
 
 class ProductsContainer extends Component {
   state = {
@@ -21,7 +20,7 @@ class ProductsContainer extends Component {
       return this.props.products
     }
   }
-
+//controlled input field based on the content of the react state.input
   render() {
     return (
     <Container>
