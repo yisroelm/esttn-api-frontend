@@ -11,9 +11,11 @@ import ClientsContainer from './containers/ClientsContainer';
 
 
 class App extends React.Component {
-
+  //only renders after all the elements on the page are rendered correctly****
     componentDidMount() {
+      console.log("1") //1st
       this.props.fetchLes()
+      console.log("2") //3rd reads this and goes back to complete the fetch
     }
 
     render() {

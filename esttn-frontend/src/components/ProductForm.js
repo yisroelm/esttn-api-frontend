@@ -17,7 +17,7 @@ class ProductForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={() => this.props.createProduct(this.state.input, 1)}> 
+                <form onSubmit={() => this.props.createP(this.state.input, 1)}> 
                     <input type="text" onChange={this.handleChange} value={this.state.input}></input>
                     <input type="submit" value ="Create Product" />
                 </form>
@@ -28,9 +28,7 @@ class ProductForm extends Component {
 
     const mapDispatchToProps = dispatch => {
         return{
-            createProduct: (productName, le_id) => dispatch (
-                createProduct(productName, le_id)
-            )
+            createP: (productName, le_id) => dispatch (createProduct(productName, le_id))
         }
     }
 
