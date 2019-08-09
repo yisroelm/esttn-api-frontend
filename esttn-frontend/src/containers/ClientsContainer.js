@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Card, Container } from 'semantic-ui-react'
 import ClientCard from '../components/ClientCard';
 
+
 class ClientsContainer extends Component {
 
   render() {

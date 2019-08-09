@@ -1,5 +1,6 @@
 import React from 'react' 
 import { Card, Image } from 'semantic-ui-react'
+import ClientDateForm from './ClientDataForm';
 
 const ClientCard = (props) => {
         return (
@@ -18,6 +19,7 @@ const ClientCard = (props) => {
                         *Place your info here*
                     </Card.Content>
                 </Card>
+                <ClientDateForm />
             </div>
         )
     }
