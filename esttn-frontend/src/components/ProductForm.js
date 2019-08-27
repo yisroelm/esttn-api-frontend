@@ -13,11 +13,15 @@ class ProductForm extends Component {
             input: e.target.value //updating state on keystroke
         })
     }
+    submit = e => {
+        e.preventDefault()
+        this.props.createP(this.state.input, 1)
+    }
 
     render() {
         return (
             <div>
-                <form onSubmit={() => this.props.createP(this.state.input, 1)}> 
+                <form onSubmit={(e) => this.submit(e)}> 
                     <input type="text" onChange={this.handleChange} value={this.state.input}></input>
                     <input type="submit" value ="Create Product" />
                 </form>

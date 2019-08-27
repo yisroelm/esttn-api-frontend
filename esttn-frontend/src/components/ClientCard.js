@@ -1,6 +1,6 @@
 import React from 'react' 
 import { Card, Image } from 'semantic-ui-react'
-import ClientDateForm from './ClientDataForm';
+// import ClientDateForm from './ClientDataForm';
 
 const ClientCard = (props) => {
         return (
