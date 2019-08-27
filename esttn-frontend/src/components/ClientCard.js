@@ -19,7 +19,7 @@ const ClientCard = (props) => {
                         *Place your info here*
                     </Card.Content>
                 </Card>
-                <ClientDateForm />
+                {/* <ClientDateForm /> */}
             </div>
         )
     }

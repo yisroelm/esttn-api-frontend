@@ -41,4 +41,8 @@ const mapStateToProps = state => {
  return {les: state.les}
 }
 
-export default connect(mapStateToProps, {fetchLes})(App)
+const mapDispatchToProps = dispatch => {
+  return {fetchLes: () => dispatch(fetchLes())}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
