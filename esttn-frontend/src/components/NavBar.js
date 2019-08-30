@@ -7,11 +7,11 @@ const NavBar = () => {
 
     <Container>
         <br/>
-        <div class='navbar' class='center'>
-          <Link to='/' exact><Button size='massive' color='purple'>Les</Button></Link>
-          <Link to='/clients' exact><Button size='massive' color='red'>Clients</Button></Link>
-          <Link to='/products' exact><Button size='massive' color='blue'>Products</Button></Link>
-          <Link to='/appointments' exact><Button size='massive' color='grey'>Appointments</Button></Link>
+        <div className='center navbar'>
+          <Link to='/'><Button size='medium' color='olive'>Le Profile</Button></Link>
+          <Link to='/clients'><Button size='medium' color='red'>Clients</Button></Link>
+          <Link to='/products'><Button size='medium' color='blue'>Products</Button></Link>
+          <Link to='/appointments'><Button size='medium' color='green'>Appointments</Button></Link>
           <br/>
           <br/>
         </div>
