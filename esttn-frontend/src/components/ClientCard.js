@@ -1,6 +1,7 @@
 import React from 'react' 
 import { Card, Image } from 'semantic-ui-react'
-// import ClientDateForm from './ClientDataForm';
+import ClientDateForm from './ClientDataForm';
+import Like from './Like';
 
 const ClientCard = (props) => {
         return (
@@ -12,14 +13,16 @@ const ClientCard = (props) => {
                         {props.client.name}
                         </Card.Header>
                         <Card.Description>
-                        {props.client.age} 
+                        {props.client.age}
+                        <Like /> 
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
                         *Place your info here*
                     </Card.Content>
                 </Card>
-                {/* <ClientDateForm /> */}
+                <ClientDateForm />
+        
             </div>
         )
     }

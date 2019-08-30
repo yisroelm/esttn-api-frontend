@@ -18,8 +18,9 @@ export default (state = initialState, action) => { //action is expected
         } //action.paylaod
 
      case "CREATE_PRODUCT":
-         return {...state, products: state.products.concat(action.product)}
-         //return {...state.products.concat(action.product)} 
+        return {...state, products: state.products.concat(action.product)}
+        //return {...state.products.concat(action.product)} 
+
 
      default:
         return state;

@@ -9,13 +9,17 @@ class ProductForm extends Component {
     }
 
     handleChange = e => {
-        this.setState({
+        this.setState({ // setState is async and can take an object or a function
             input: e.target.value //updating state on keystroke
         })
     }
+
     submit = e => {
         e.preventDefault()
         this.props.createP(this.state.input, 1)
+        this.setState({ // resets to blank form
+            input: ""
+        })
     }
 
     render() {
